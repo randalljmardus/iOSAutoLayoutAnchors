@@ -19,10 +19,14 @@ class ViewController: UIViewController {
         blueBox.backgroundColor = UIColor.blueColor()
         blueBox.translatesAutoresizingMaskIntoConstraints = false
         
-        blueBox.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 30).active = true
+       // blueBox.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 30).active = true
         // blueBox.leftAnchor.constraintEqualToAnchor(view.leftAnchor, constant: 50).active = true
         blueBox.widthAnchor.constraintEqualToConstant(200).active = true
         blueBox.heightAnchor.constraintEqualToConstant(100).active = true
+        
+        blueBox.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
+        
+        blueBox.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
 
         let button = UIButton()
         button.setTitle("play again", forState: .Normal)
@@ -32,11 +36,10 @@ class ViewController: UIViewController {
         
         //button.leftAnchor.constraintEqualToAnchor(blueBox.leftAnchor, constant: 20).active = true
         button.heightAnchor.constraintEqualToConstant(100).active = true
-        button.lastBaselineAnchor.constraintEqualToAnchor(blueBox.bottomAnchor).active = true
+     //   button.lastBaselineAnchor.constraintEqualToAnchor(blueBox.bottomAnchor).active = true
         
         button.centerXAnchor.constraintEqualToAnchor(blueBox.centerXAnchor).active = true
-        
-        blueBox.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
+        button.centerYAnchor.constraintEqualToAnchor(blueBox.centerYAnchor).active = true
         
         let label = UILabel()
         label.text = "I'm going to add lots of anchors"
