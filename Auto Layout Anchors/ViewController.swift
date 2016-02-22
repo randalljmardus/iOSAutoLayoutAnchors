@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         blueBox.translatesAutoresizingMaskIntoConstraints = false
         
         blueBox.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 30).active = true
-        blueBox.leftAnchor.constraintEqualToAnchor(view.leftAnchor, constant: 50).active = true
+        // blueBox.leftAnchor.constraintEqualToAnchor(view.leftAnchor, constant: 50).active = true
         blueBox.widthAnchor.constraintEqualToConstant(200).active = true
         blueBox.heightAnchor.constraintEqualToConstant(100).active = true
 
@@ -30,9 +30,13 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
         
-        button.leftAnchor.constraintEqualToAnchor(blueBox.leftAnchor, constant: 20).active = true
+        //button.leftAnchor.constraintEqualToAnchor(blueBox.leftAnchor, constant: 20).active = true
         button.heightAnchor.constraintEqualToConstant(100).active = true
         button.lastBaselineAnchor.constraintEqualToAnchor(blueBox.bottomAnchor).active = true
+        
+        button.centerXAnchor.constraintEqualToAnchor(blueBox.centerXAnchor).active = true
+        
+        blueBox.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
         
         let label = UILabel()
         label.text = "I'm going to add lots of anchors"
@@ -41,6 +45,8 @@ class ViewController: UIViewController {
         
         label.leftAnchor.constraintEqualToAnchor(button.leftAnchor, constant: 10).active = true
         label.firstBaselineAnchor.constraintEqualToAnchor(button.bottomAnchor).active = true
+        
+        
         
     }
 
