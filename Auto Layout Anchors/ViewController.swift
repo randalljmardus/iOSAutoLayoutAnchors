@@ -34,6 +34,14 @@ class ViewController: UIViewController {
         button.heightAnchor.constraintEqualToConstant(100).active = true
         button.lastBaselineAnchor.constraintEqualToAnchor(blueBox.bottomAnchor).active = true
         
+        let label = UILabel()
+        label.text = "I'm going to add lots of anchors"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        
+        label.leftAnchor.constraintEqualToAnchor(button.leftAnchor, constant: 10).active = true
+        label.firstBaselineAnchor.constraintEqualToAnchor(button.bottomAnchor).active = true
+        
     }
 
     override func didReceiveMemoryWarning() {
