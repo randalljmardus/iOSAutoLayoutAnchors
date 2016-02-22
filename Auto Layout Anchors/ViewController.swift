@@ -13,6 +13,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+    let blueBox = UIView()
+        view.addSubview(blueBox)
+        blueBox.backgroundColor = UIColor.blueColor()
+        blueBox.translatesAutoresizingMaskIntoConstraints = false
+        
+        blueBox.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
+        blueBox.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
+        blueBox.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
+        blueBox.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
+        
+        
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
