@@ -19,20 +19,21 @@ class ViewController: UIViewController {
         blueBox.backgroundColor = UIColor.blueColor()
         blueBox.translatesAutoresizingMaskIntoConstraints = false
         
-        //blueBox.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
-       // blueBox.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
-        //blueBox.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
-        //blueBox.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
+        blueBox.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 30).active = true
+        blueBox.leftAnchor.constraintEqualToAnchor(view.leftAnchor, constant: 50).active = true
+        blueBox.widthAnchor.constraintEqualToConstant(200).active = true
+        blueBox.heightAnchor.constraintEqualToConstant(100).active = true
+
+        let button = UIButton()
+        button.setTitle("play again", forState: .Normal)
+        button.backgroundColor = UIColor.redColor()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(button)
         
-        //blueBox.widthAnchor.constraintEqualToConstant(200).active = true
-        //blueBox.heightAnchor.constraintEqualToConstant(100).active = true
+        button.leftAnchor.constraintEqualToAnchor(blueBox.leftAnchor, constant: 20).active = true
+        button.heightAnchor.constraintEqualToConstant(100).active = true
+        button.lastBaselineAnchor.constraintEqualToAnchor(blueBox.bottomAnchor).active = true
         
-        //blueBox.widthAnchor.constraintGreaterThanOrEqualToAnchor(view.widthAnchor, multiplier: 0.5).active = true
-        blueBox.heightAnchor.constraintGreaterThanOrEqualToAnchor(view.heightAnchor, multiplier: 0.5).active = true
-        
-        blueBox.widthAnchor.constraintGreaterThanOrEqualToAnchor(view.widthAnchor, multiplier: 0.5, constant: 80).active = true
-        
-    
     }
 
     override func didReceiveMemoryWarning() {
